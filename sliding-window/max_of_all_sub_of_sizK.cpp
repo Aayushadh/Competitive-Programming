@@ -1,14 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
- // } Driver Code Ends
-vector <int> max_of_subarrays(int *arr, int n, int k){
-    // your code here
-    
+vector <int> max_of_subarrays(int *arr, int n, int k)
+{
     vector<int> ans;
     deque<int> q;
-    
     
     for(int i=0;i<k-1;i++)
     {
@@ -18,10 +14,7 @@ vector <int> max_of_subarrays(int *arr, int n, int k){
         }
         
         q.push_back(arr[i]);
-        
-        
     }
-    
     
     for(int i=0;i<n-k+1;i++)
     {
@@ -37,17 +30,11 @@ vector <int> max_of_subarrays(int *arr, int n, int k){
         {
             q.pop_front();
         }
-        
-        
     }
-    
     
     return ans;
     
 }
-
-
-// { Driver Code Starts.
 
 int main() {
 	
@@ -71,4 +58,4 @@ int main() {
 	}
 	
 	return 0;
-}  // } Driver Code Ends
+}
